@@ -26,15 +26,15 @@
 
 // Hardware used in this example
 //  - Imp005
-//  - Brother QL-720NW label printer
+//  - Brother QL-820NWB label printer
 
 
-// Driver for QL720NW label printer use via USB
-class QL720NWUsbDriver extends USB.Driver {
+// Driver for QL820NWB label printer use via USB
+class QL820NWBUsbDriver extends USB.Driver {
     
-    // Brother QL720
+    // Brother QL820
     static VID = 0x04f9;
-    static PID = 0x2044;
+    static PID = 0x209D;
     
     // Print actions queue
     _actions   = null; 
@@ -68,7 +68,7 @@ class QL720NWUsbDriver extends USB.Driver {
         _bulkOut = null;
     }
     
-    // QL720NW expects a preconfigured uart. The only 
+    // QL820NWB expects a preconfigured uart. The only 
     // uart method called in the library is uart.write
     // Create a write method for this driver, so this 
     // driver can be used instead of a uart object when 
@@ -82,7 +82,7 @@ class QL720NWUsbDriver extends USB.Driver {
     // Metafunction to return class name when typeof <instance> is run
     //
     function _typeof() {
-        return "QL720NWUsbDriver";
+        return "QL820NWBUsbDriver";
     }
 
     // ==================================================
